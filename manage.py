@@ -2,10 +2,14 @@
 """Django's command-line utility for administrative tasks."""
 import os
 import sys
-
+import dotenv
 
 def main():
     """Run administrative tasks."""
+    # dotenv.load_dotenv()
+    # print("email is",os.environ.get('EMAIL_USER'))
+    # print(os.environ.get('USER'))
+    # print(os.environ.get('EMAIL_PASS'))
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'django_project.settings')
     try:
         from django.core.management import execute_from_command_line
